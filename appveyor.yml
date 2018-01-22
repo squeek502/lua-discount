@@ -10,6 +10,7 @@ matrix:
   fast_finish: true
 
 install:
+  - git submodule update --init --recursive
   - set PATH=%CD%\env\bin;C:\Python27\Scripts;%PATH%
   - pip install hererocks
   - hererocks env --%LUA%
