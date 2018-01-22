@@ -14,7 +14,6 @@ Requirements
 * C compiler
 * [CMake]
 * [Lua] `>= 5.1`
-* [Discount] `>= 2.2.1`
 
 Installation
 ------------
@@ -111,6 +110,7 @@ idanchor        | Use `id=` anchors for TOC links
 githubtags      | Allow dash and underscore in element names
 urlencodedanchor| URL encode non-identifier chars instead of replacing with dots
 latex           | Handle embedded LaTeX escapes
+explicitlist    | Do not merge adjacent numeric/bullet lists
 embed           | Equivalent to combining `nolinks`, `noimages` and `tagtext`
 
 [License]

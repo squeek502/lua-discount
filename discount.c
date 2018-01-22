@@ -33,7 +33,7 @@ static const char *const options[] = {
     "safelink", "noheader", "tabstop", "nodivquote",
     "noalphalist", "nodlist", "extrafootnote", "nostyle",
     "nodldiscount", "dlextra", "fencedcode", "idanchor",
-    "githubtags", "urlencodedanchor", "latex", "embed",
+    "githubtags", "urlencodedanchor", "latex", "explicitlist", "embed",
     NULL
 };
 
@@ -44,7 +44,7 @@ static const int option_codes[] = {
     MKD_SAFELINK, MKD_NOHEADER, MKD_TABSTOP, MKD_NODIVQUOTE,
     MKD_NOALPHALIST, MKD_NODLIST, MKD_EXTRA_FOOTNOTE, MKD_NOSTYLE,
     MKD_NODLDISCOUNT, MKD_DLEXTRA, MKD_FENCEDCODE, MKD_IDANCHOR,
-    MKD_GITHUBTAGS, MKD_URLENCODEDANCHOR, MKD_LATEX, MKD_EMBED
+    MKD_GITHUBTAGS, MKD_URLENCODEDANCHOR, MKD_LATEX, MKD_EXPLICITLIST, MKD_EMBED
 };
 
 static int push_error(lua_State *L, MMIOT *mm, const char *message) {
