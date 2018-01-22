@@ -1,12 +1,12 @@
 lua-discount
 ============
 
+This fork is mostly unchanged from [craigbarnes/lua-discount](https://github.com/craigbarnes/lua-discount) except that it uses CMake for compilation and therefore gets Windows support for free.
+
 [![Build status](https://ci.appveyor.com/api/projects/status/l4f7sy4rq3b6vk23?svg=true)](https://ci.appveyor.com/project/squeek502/lua-discount)
 [![Build Status](https://travis-ci.org/squeek502/lua-discount.svg?branch=master)](https://travis-ci.org/squeek502/lua-discount)
 
 Lua bindings for the [Discount] [Markdown] library.
-
-This fork is mostly unchanged from [craigbarnes/lua-discount](https://github.com/craigbarnes/lua-discount) except that it uses CMake for compilation and therefore gets Windows support for free.
 
 Requirements
 ------------
@@ -29,7 +29,7 @@ cmake --build . --config Release --target install
 ```
 If needed, you can specify a [generator](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) by doing `cmake -G "Visual Studio 14 2015 Win64" ..` instead of `cmake ..`
 
-Note: On Windows, you'll need to have a Lua static library available that [can be found by `cmake`](https://cmake.org/cmake/help/v3.0/module/FindLua.html) (preferably built with the same compiler you're using to build sleep).
+*Note: On Windows, you'll need to have a Lua static library available that [can be found by `cmake`](https://cmake.org/cmake/help/v3.0/module/FindLua.html) (preferably built with the same compiler you're using to build sleep).*
 
 ### On Linux
 From the `lua-discount` directory, do the following:
