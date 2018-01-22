@@ -1,8 +1,13 @@
 cmake_minimum_required (VERSION 2.6)
 project (discount C)
 
-# Needed on UNIX
-set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+if(UNIX)
+  set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+endif()
+
+if(MSVC)
+  add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+endif()
 
 if(WIN32)
   find_package (Lua REQUIRED)
