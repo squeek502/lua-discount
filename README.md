@@ -3,26 +3,39 @@ lua-discount
 
 Lua bindings for the [Discount] [Markdown] library.
 
+This fork is mostly unchanged from [craigbarnes/lua-discount](https://github.com/craigbarnes/lua-discount) except that it uses CMake for compilation and therefore gets Windows support as a byproduct.
+
 Requirements
 ------------
 
 * C compiler
-* [GNU Make] `>= 3.81`
+* [CMake]
 * [Lua] `>= 5.1`
 * [Discount] `>= 2.2.1`
 
 Installation
 ------------
 
-**With LuaRocks:**
+### On Windows
+Open a command line in the `lua-discount` directory and do the following:
+```sh
+mkdir build
+cd build
+cmake ..
+cmake --build . --config Release --target install
+```
+If needed, you can specify a [generator](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) by doing `cmake -G "Visual Studio 14 2015 Win64" ..` instead of `cmake ..`
 
-    luarocks install discount
+Note: On Windows, you'll need to have a Lua static library available that [can be found by `cmake`](https://cmake.org/cmake/help/v3.0/module/FindLua.html) (preferably built with the same compiler you're using to build sleep).
 
-**With GNU Make:**
-
-    make
-    make check
-    [sudo] make install
+### On Linux
+From the `lua-discount` directory, do the following:
+```sh
+mkdir build && cd build
+cmake ..
+make
+make install
+```
 
 Usage
 -----
@@ -118,7 +131,7 @@ CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 [License]: http://en.wikipedia.org/wiki/ISC_license "ISC License"
 [Discount]: http://www.pell.portland.or.us/~orc/Code/discount/
 [Markdown]: https://en.wikipedia.org/wiki/Markdown
-[GNU Make]: https://www.gnu.org/software/make/
+[CMake]: https://cmake.org/
 [Lua]: https://www.lua.org/
 [SmartyPants]: http://www.pell.portland.or.us/~orc/Code/discount/#smartypants
 [Markdown Extra]: https://michelf.ca/projects/php-markdown/extra/
