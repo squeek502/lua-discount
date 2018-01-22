@@ -1,9 +1,12 @@
 lua-discount
 ============
 
+[![Build status](https://ci.appveyor.com/api/projects/status/l4f7sy4rq3b6vk23?svg=true)](https://ci.appveyor.com/project/squeek502/lua-discount)
+[![Build Status](https://travis-ci.org/squeek502/lua-discount.svg?branch=master)](https://travis-ci.org/squeek502/lua-discount)
+
 Lua bindings for the [Discount] [Markdown] library.
 
-This fork is mostly unchanged from [craigbarnes/lua-discount](https://github.com/craigbarnes/lua-discount) except that it uses CMake for compilation and therefore gets Windows support as a byproduct.
+This fork is mostly unchanged from [craigbarnes/lua-discount](https://github.com/craigbarnes/lua-discount) except that it uses CMake for compilation and therefore gets Windows support for free.
 
 Requirements
 ------------
