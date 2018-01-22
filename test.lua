@@ -1,5 +1,3 @@
-package.path  = ''
-package.cpath = './?.so'
 local discount = require "discount"
 local markdown = discount.compile
 local doc

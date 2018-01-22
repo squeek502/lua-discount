@@ -20,6 +20,12 @@
 #include <lauxlib.h>
 #include <mkdio.h>
 
+#ifdef _WIN32
+    #define EXPORT __declspec(dllexport)
+#else
+    #define EXPORT
+#endif
+
 static const char *const options[] = {
     "nolinks", "noimages", "nopants", "nohtml", "strict",
     "tagtext", "noext", "cdata", "nosuperscript", "norelaxed",
@@ -96,7 +102,7 @@ static int compile(lua_State *L) {
     return 1;
 }
 
-int luaopen_discount(lua_State *L) {
+EXPORT int luaopen_discount(lua_State *L) {
     lua_createtable(L, 0, 1);
     lua_pushcfunction(L, compile);
     lua_setfield(L, -2, "compile");
